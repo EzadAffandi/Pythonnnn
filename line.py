@@ -5,12 +5,16 @@ REMOTE_HOSTNAME="^(\d{1,3})\.\d+\.\d+(\.\d+)$"
 
 #on detecte l'OS utilisé
 def detect_os(user_agent):
-    if 'Windows' in user_agent:
-        return 'Windows'
-    if 'Mac' in user_agent:
-        return 'Mac'
+    if 'Windows NT 6.2' in user_agent:
+        return 'Windows NT 6.2'
+    if 'Mac OS X' in user_agent:
+        return 'Mac OS X'
+    if 'Mac OS iPhone OS 6_0X' in user_agent:
+        return 'iOS 6_0'
     if 'Linux' in user_agent:
         return 'Linux'
+    else:
+        return 'unknown'
         
 #la fonction qui permet de séparer les infos dans un ligne
 def parse_line(line):
@@ -35,6 +39,7 @@ def readFichier(f):
         #enregistrer les infos de chaque ligne dans une liste
         dictparline.append(parse_line(line))
     
+    #ecrit tous les dictionaires dans fichier json
     with open(f[:-4]+'.json','w') as fg:
         json.dump(dictparline, fg, indent=8)
     return dictparline
@@ -46,8 +51,4 @@ def get_ip(inputt):
 		return match.group(1) 
 	return None
 
-doc=readFichier('apache_logs.log')
-
-#result=json.dumps(doc , indent = 8)
-#print(result)
 #print(get_ip('46.10.14.53'))
