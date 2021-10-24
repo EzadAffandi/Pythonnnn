@@ -122,7 +122,7 @@ def statistique_all(f):
       c.create_text(80+(50*k)+24, 798-i/2-15,text=i) 
       c.create_text(80+(50*k)+24, 778,text=h+'h') 
       k=k+1    
-    c.create_text(700, 795, text="La statistique des utilisateurs pas heure", fill="red")      
+    c.create_text(700, 795, text="La statistique des utilisateurs par heure", fill="red")      
  
     #Démarrage de la boucle Tkinter (à placer à la fin !!!)
     fenetre.mainloop()
