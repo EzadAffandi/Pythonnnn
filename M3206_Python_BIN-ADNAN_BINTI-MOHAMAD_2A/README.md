@@ -37,6 +37,6 @@ Le projet Python
 		
 		> python3 graphique.py --stats reponse : pour afficher la statistique du code renvoyé pour la réponse
 		
-		> python3 graphique.py --stats heure : pour afficher la statistique des utilisateurs pas heure
+		> python3 graphique.py --stats heure : pour afficher la statistique des utilisateurs par heure
 		
 		> python3 graphique.py --stats ip : pour chercher les informations à partir l'adresse IP
