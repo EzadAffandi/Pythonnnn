@@ -235,7 +235,7 @@ def stat_heure(f):
     x1=10 
     x2=20 
     k=0 
-    c.create_text(600, 20, text="La statistique des utilisateurs pas heure", fill="red")  
+    c.create_text(600, 20, text="La statistique des utilisateurs par heure", fill="red")  
     for h in heure: 
       i=heure[h] 
       c.create_rectangle(10+(50*k), 335-i/2, 60+(50*k), 338 , fill="salmon") 
